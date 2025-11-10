@@ -66,13 +66,9 @@ const CommodityTable = ({ commodities }) => {
 
   return (
     <Box sx={{
-      backgroundColor: "#000000",
-      marginTop: "20px",
-      padding: "15px",
-      borderRadius: "20px",
       display: 'flex',
       flexDirection: 'column',
-      gap: '15px',
+      gap: '10px',
     }}>
       {/* Commodity Rate Blocks */}
       {commodities.map((commodity, index) => {
@@ -139,13 +135,13 @@ const CommodityTable = ({ commodities }) => {
               display: 'flex',
               alignItems: 'center',
               flex: '1',
-              minWidth: '180px'
+              minWidth: '150px'
             }}>
               <Typography
                 sx={{
                   color: "#D1A44F",
                   fontWeight: "bold",
-                  fontSize: "1.3vw",
+                  fontSize: "1vw",
                   textAlign: "left",
                   letterSpacing: "0.5px"
                 }}
@@ -171,13 +167,13 @@ const CommodityTable = ({ commodities }) => {
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
-                minWidth: '100px'
+                minWidth: '80px'
               }}>
                 <Typography sx={{
                   color: "#FFFFFF",
                   fontSize: "1vw",
                   textAlign: "center",
-                  marginBottom: "2px",
+                  marginBottom: "0px",
                   fontWeight: "500"
                 }}>
                   BID (AED)
@@ -185,7 +181,7 @@ const CommodityTable = ({ commodities }) => {
                 <Typography sx={{
                   color: "#D1A44F",
                   fontWeight: "bold",
-                  fontSize: "1.4vw",
+                  fontSize: "1.2vw",
                   textAlign: "center",
                   letterSpacing: "0.5px"
                 }}>
@@ -198,13 +194,13 @@ const CommodityTable = ({ commodities }) => {
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
-                minWidth: '100px'
+                minWidth: '80px'
               }}>
                 <Typography sx={{
                   color: "#FFFFFF",
                   fontSize: "1vw",
                   textAlign: "center",
-                  marginBottom: "2px",
+                  marginBottom: "0px",
                   fontWeight: "500"
                 }}>
                   ASK (AED)
@@ -212,7 +208,7 @@ const CommodityTable = ({ commodities }) => {
                 <Typography sx={{
                   color: "#D1A44F",
                   fontWeight: "bold",
-                  fontSize: "1.4vw",
+                  fontSize: "1.2vw",
                   textAlign: "center",
                   letterSpacing: "0.5px"
                 }}>

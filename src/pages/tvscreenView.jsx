@@ -13,6 +13,7 @@ import {
 import io from "socket.io-client";
 import { useSpotRate } from "../context/SpotRateContext";
 import VideoPlayer from "../components/VideoPlayer";
+import TradingView from "../components/TradingView";
 
 function TvScreen() {
   const [showLimitModal, setShowLimitModal] = useState(false);
@@ -180,22 +181,22 @@ function TvScreen() {
           <SpotRate />
         </Box>
 
-        <Box className="flex flex-row width-[30%] mt-6">
-          {/* Commodity Table */}
-          <CommodityTable commodities={commodities} />
+        <Box className="flex flex-row justify-between items-center mt-10 gap-4" sx={{
+          backgroundColor: "#000000",
+          marginTop: "20px",
+          padding: "15px",
+          borderRadius: "20px",
+        }}>
+          <Box className="flex flex-row width-[30%] mt-6">
+            {/* Commodity Table */}
+            <CommodityTable commodities={commodities} />
+          </Box>
+
+          <VideoPlayer /> {/* Plays news video */}
         </Box>
 
-        {/* ✅ News Video Player Box */}
-        <Box
-          sx={{
-            backgroundColor: "rgba(0,0,0,0.8)",
-            marginTop: "12vw",
-            borderRadius: "20px",
-            padding: "15px",
-            width: "50%",
-          }}
-        >
-          <VideoPlayer /> {/* Plays news video */}
+        <Box>
+          <TradingView />
         </Box>
 
         {/* Conditional Modal */}
