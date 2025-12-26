@@ -8,8 +8,8 @@ function App() {
 
   useEffect(() => {
     const updateScale = () => {
-      const baseWidth = 970;
-      const baseHeight = 1248;
+      const baseWidth = 468;
+      const baseHeight = 625;
       const scaleWidth = window.innerWidth / baseWidth;
       const scaleHeight = window.innerHeight / baseHeight;
       const newScale = Math.min(scaleWidth, scaleHeight);
