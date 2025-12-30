@@ -1,19 +1,19 @@
 import { useEffect, useState } from "react";
 import { SpotRateProvider } from "./context/SpotRateContext";
-import "./App.css";
 import TvScreen from "./pages/tvscreenView";
+import "./App.css";
+
+const BASE_WIDTH = 468;
+const BASE_HEIGHT = 625;
 
 function App() {
   const [scale, setScale] = useState(1);
 
   useEffect(() => {
     const updateScale = () => {
-      const baseWidth = 468;
-      const baseHeight = 625;
-      const scaleWidth = window.innerWidth / baseWidth;
-      const scaleHeight = window.innerHeight / baseHeight;
-      const newScale = Math.min(scaleWidth, scaleHeight);
-      setScale(newScale);
+      const scaleX = window.innerWidth / BASE_WIDTH;
+      const scaleY = window.innerHeight / BASE_HEIGHT;
+      setScale(Math.min(scaleX, scaleY));
     };
 
     updateScale();
@@ -23,16 +23,15 @@ function App() {
 
   return (
     <SpotRateProvider>
-      <div
-        style={{
-          transform: `scale(${scale})`,
-          transformOrigin: "top left",
-          width: "468px",
-          height: "625px",
-          overflow: "hidden",
-        }}
-      >
-        <TvScreen />
+      <div className="led-wrapper">
+        <div
+          className="led-screen"
+          style={{
+            transform: `scale(${scale})`,
+          }}
+        >
+          <TvScreen />
+        </div>
       </div>
     </SpotRateProvider>
   );
