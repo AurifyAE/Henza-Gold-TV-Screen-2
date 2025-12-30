@@ -27,8 +27,8 @@ function App() {
         style={{
           transform: `scale(${scale})`,
           transformOrigin: "top left",
-          width: "970px",
-          height: "1248px",
+          width: "468px",
+          height: "625px",
           overflow: "hidden",
         }}
       >
